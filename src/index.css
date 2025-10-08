@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-flowPurple: #8A2BE2;
+  --color-flowBlue: #00BFFF;
+  --color-flowMagenta: #FF1493;
+  --color-flowRed: #F15BB5;
+  --color-flowDark: #0A0A0A;
+  --color-flowElectric: #007BFF;
+}
+
+/* Estilos globales */
+body {
+  @apply bg-flowDark text-white;
+  font-family: 'Poppins', sans-serif;
+}
