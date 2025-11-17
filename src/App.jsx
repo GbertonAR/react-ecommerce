@@ -2,7 +2,7 @@
 
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// 1. ✅ DESCOMENTAR: Importación de ToastContainer y estilos para notificaciones
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

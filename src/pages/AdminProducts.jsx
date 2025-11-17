@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getProducts, deleteProduct } from "../services/products";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export default function AdminProducts() {
   const [products, setProducts] = useState([]);
@@ -31,11 +31,11 @@ export default function AdminProducts() {
 
     try {
       await deleteProduct(id);
-      // toast.success("Producto eliminado");
+      toast.success("Producto eliminado");
       setProducts(products.filter((p) => p.id !== id));
     } catch (err) {
       console.error(err);
-      // toast.error("Error eliminando producto");
+      toast.error("Error eliminando producto");
     }
   }
 

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ export default function Login() {
       return;
     }
 
-    //toast.success("Bienvenido!");
+    toast.success("Bienvenido!");
 
     // Redirección según rol desde AuthContext
     const savedUser = JSON.parse(localStorage.getItem("flow_user"));

@@ -20,7 +20,7 @@ export default function CreateProduct() {
     if (!price || price <= 0) return "El precio debe ser un número mayor a 0.";
     if (!product.description || product.description.trim().length < 10)
       return "La descripción debe tener al menos 10 caracteres.";
-    // image is optional, but if provided, a simple URL check:
+
     if (product.image && !/^https?:\/\/.+\.(jpg|jpeg|png|gif|webp|svg)$/i.test(product.image)) {
       return "La URL de imagen no parece válida (debe terminar en .jpg/.png/etc).";
     }
@@ -49,20 +49,20 @@ export default function CreateProduct() {
         price: Number(product.price),
         description: product.description.trim(),
         image: product.image?.trim() || "https://via.placeholder.com/400x300?text=Sin+imagen",
-        // si necesitás campos extras, agregalos aquí
+       
       };
 
       const res = await createProduct(payload);
-      // res.data es el producto creado
+
       // Mensaje y redirección
       alert("Producto creado correctamente.");
-      navigate("/"); // o a "/create-product" si querés quedarte en admin
+      navigate("/"); 
     } catch (err) {
       console.error("Error creando producto:", err);
       setError("Ocurrió un error al crear el producto. Intentá de nuevo.");
     } finally {
       setLoading(false);
-      // reset si querés limpiar el form:
+    
       setProduct({ name: "", price: "", description: "", image: "" });
     }
   };
