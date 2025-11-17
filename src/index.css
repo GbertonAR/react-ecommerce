@@ -1,16 +1,18 @@
-@import "tailwindcss";
+/* src/index.css */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-flowPurple: #8A2BE2;
-  --color-flowBlue: #00BFFF;
-  --color-flowMagenta: #FF1493;
-  --color-flowRed: #F15BB5;
-  --color-flowDark: #0A0A0A;
-  --color-flowElectric: #007BFF;
-}
-
-/* Estilos globales */
 body {
-  @apply bg-flowDark text-white;
-  font-family: 'Poppins', sans-serif;
-}
+  @apply bg-flowDark text-white min-h-screen;
+} */
+
+/* src/index.css */
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-flowDark text-white min-h-screen;
+} 
