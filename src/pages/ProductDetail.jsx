@@ -17,8 +17,8 @@ export default function ProductDetail() {
     async function fetchProduct() {
       try {
         setLoading(true);
-        const res = await getProductById(id);
-        setProduct(res.data);
+        const data = await getProductById(id);
+        setProduct(data);
       } catch (err) {
         setError("No se encontró el producto.");
       } finally {
